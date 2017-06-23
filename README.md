@@ -34,13 +34,13 @@ The next N lines of input contain either:
 
 ## Input constraints:
 
-0 < X < 2^32
+0 < X < 2<sup>32</sup>
 
-0 < Y < 2^32
+0 < Y < 2<sup>32</sup>
 
-0 < N < 2^32
+0 < N < 2<sup>32</sup>
 
-0 <= x_i < X
+0 <= x<sub>i</sub> < X
 
 0 < i < X
 
