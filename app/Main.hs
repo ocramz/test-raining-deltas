@@ -52,5 +52,6 @@ Your code should output the number of Deltas you have caught in your basket at t
 
 -}
 
-main :: IO ()
-main = putStrLn "Hello!"
+
+
+main = loadProblem "data/input002.txt"

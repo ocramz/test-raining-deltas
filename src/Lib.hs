@@ -22,4 +22,4 @@ loadProblem fname = do
 
 
       
-main = loadProblem "data/input002.txt"
+
