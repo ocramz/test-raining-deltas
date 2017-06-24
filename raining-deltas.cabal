@@ -26,6 +26,7 @@ library
                      , bytestring
                      , filepath
                      , vector
+                     , vector-algorithms
                      , mtl
                      , mwc-random
                      , primitive

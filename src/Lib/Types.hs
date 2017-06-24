@@ -11,3 +11,6 @@ data Input a = Input {
   nrowsY :: Int,
   nticks :: Int,
   inputData :: V.Vector (Maybe (V.Vector a)) } deriving (Eq, Show)
+
+
+newtype ObservableState a = ObsState { unObsState :: [Maybe (V.Vector a)]} deriving (Eq, Show)
