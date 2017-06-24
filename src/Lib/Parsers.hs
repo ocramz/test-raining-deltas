@@ -10,13 +10,7 @@ import qualified Data.ByteString as B (ByteString)
 
 import qualified Data.Vector as V
 
--- * Types
-
-data Input a = Input {
-  ncolsX :: Int,
-  nrowsY :: Int,
-  nticks :: Int,
-  inputData :: V.Vector a } deriving (Eq, Show)
+import Lib.Types
 
 -- * Parsers
 
@@ -37,7 +31,7 @@ parseLine = (no_dat <|> dat) <* endOfLine where
   no_dat = char '-' >> pure Nothing
   
 
-parseInput :: Parser B.ByteString (Input (Maybe [Int]))
+parseInput :: Parser B.ByteString (Input Int)
 parseInput = do
   (x, y, n) <- parseHeader
   ii <- PB.count n parseLine
