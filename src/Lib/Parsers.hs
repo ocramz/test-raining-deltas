@@ -23,14 +23,13 @@ parseHeader = (,,) <$>
   (decimal <* endOfLine) <*>
   (decimal <* endOfLine)
 
-parseLine :: Parser B.ByteString (Maybe [Int])
+parseLine :: Parser B.ByteString (Maybe (V.Vector Int))
 parseLine = (no_dat <|> dat) <* endOfLine where
   dat = do
     js <- PB.sepBy decimal space
-    pure $ Just js
+    pure $ Just $ V.fromList js
   no_dat = char '-' >> pure Nothing
   
-
 parseInput :: Parser B.ByteString (Input Int)
 parseInput = do
   (x, y, n) <- parseHeader

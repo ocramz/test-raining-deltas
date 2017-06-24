@@ -27,6 +27,8 @@ library
                      , filepath
                      , vector
                      , mtl
+                     , mwc-random
+                     , primitive
 
 executable raining-deltas
   default-language:    Haskell2010

@@ -10,4 +10,4 @@ data Input a = Input {
   ncolsX :: Int,
   nrowsY :: Int,
   nticks :: Int,
-  inputData :: V.Vector (Maybe [a]) } deriving (Eq, Show)
+  inputData :: V.Vector (Maybe (V.Vector a)) } deriving (Eq, Show)
